@@ -1,0 +1,5 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4500
+
+https://github.com/jespino/vim-rebtags
+
+RebTags provides a easy way to rebuild your tags file based on your project directory. It uses the repository directories (.git, .hg, _darcs...) as markers or a .ctags configuration file to find where must build the tags file.
