@@ -17,6 +17,10 @@ RebTags provides a easy way to rebuild your tags file based on your project
 directory. It uses the repository directories (.git, .hg, _darcs...) as
 markers or a .ctags configuration file to find where must build the tags file.
 
+IMPORTANT NOTE: Take care with your .ctags configuration and the
+|g:rebtags_extra_arguments| setting to no scan the generated tags file, can
+enter in an infinite loop.
+
 ==============================================================================
 2. Configuration                                    *rebtags-configuration*
 
@@ -46,6 +50,12 @@ is .ctags): >
 Use this to define extra parameters to your ctags command (the default value
 is no extra parameters): >
     let g:rebtags_extra_arguments = '--python-kinds --languages=python'
+<
+
+                                        *'g:rebtags_auto_add_project_tags'*
+Use this to define enable or disable the automatically add of the generated
+tags file to the tags setting of the vim (the default value is 1): >
+    let g:rebtags_auto_add_project_tags = 0
 <
 
 ==============================================================================
